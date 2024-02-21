@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 const OrderConfirmation = ({ order }) => {
   const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
 
   const handleConfirm = async () => {
     const items = order.map(item => ({
@@ -11,7 +12,7 @@ const OrderConfirmation = ({ order }) => {
         name: item.name,
         price: item.price
       },
-      quantity: item.quantity
+      quantity: 0
     }));
   
     try {
@@ -22,11 +23,13 @@ const OrderConfirmation = ({ order }) => {
         setMessage(`Su pedido está confirmado. Resumen del pedido: ${orderSummary}`);
     } catch (error) {
       console.error(error);
+      setError(error.response.data.errors[0].msg)
     }
   };
 
   return (
     <div>
+      {error}
       <button className="text-green-500" onClick={handleConfirm}>Confirmar pedido</button>
       {message && <p>{message}</p>}
     </div>

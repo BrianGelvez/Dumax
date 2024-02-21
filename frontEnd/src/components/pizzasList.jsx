@@ -1,4 +1,3 @@
-// components/PizzaList.js
 import { useState } from "react";
 import axios from "axios";
 import OrderConfirmation from "./orderConfirmation";

@@ -1,6 +1,5 @@
 const { Router } = require("express");
 const router = Router();
-const { body, validationResult } = require('express-validator');
 const pizzaController = require("../controllers/pizzaController");
 const validateOrder = require('../middleware/validateOrder');
 const orderController = require('../controllers/orderController');
