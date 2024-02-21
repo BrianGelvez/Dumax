@@ -1,29 +1,37 @@
-Frontend
-========
+# Pizzeria Frontend
 
-To better assess a candidates development skills, we would like to provide the following challenge. This is intendend to be developed within an hour of time.
+Este proyecto es el frontend de una aplicación de pizzería. El objetivo es consumir una API JSON proporcionada por un servidor backend para ordenar pizzas.
 
-Prerequisites
--------------
+## Tecnologías utilizadas
 
-* [Git](http://git-scm.com/)
-* [npm](https://www.npmjs.org/)
-* [reactjs](https://reactjs.org/)
-* [axios](https://axios-http.com/es/docs/intro)
-* [jest](https://jestjs.io/)
+- React.js
+- Axios para las solicitudes HTTP
+- Tailwind css
 
-* You can use any additional libraries you want.
+## Componentes
+
+Los componentes principales en este proyecto son:
+
+- **PizzaList**: muestra una lista de pizzas disponibles para ordenar.
+- **OrderSummary**: muestra un resumen del pedido actual.
+
+## Funcionalidades
+
+Las funcionalidades que se implementan son:
+
+- Mostrar una lista de pizzas disponibles para ordenar.
+- Permitir al usuario seleccionar la cantidad de cada pizza para agregar al pedido.
+- Mostrar un resumen del pedido con los detalles de cada pizza y la cantidad ordenada.
+- Enviar el pedido al servidor backend cuando el usuario confirma el pedido.
 
 
-Project description
--------------------
+## Principios SOLID
 
-We want to develop a small web app that allows users to order pizza.
+El código intenta siguir los principios SOLID para garantizar que sea fácil de mantener y extender en el futuro.
 
-This client will interface with the API built in the backend portion of the challenge.
+## Cómo ejecutar el proyecto
 
-First of all should display the list of pizzas with ingredients and prices. Data will be loaded from `/api/pizzas`.
-
-When the user chooses something from the list the order summary will update dynamically.
-
-There will be a button to confirm the order. An Axios call will be performed to `/api/order` and the result will be displayed as a message like this: "Your order is cofirmed. Order summary: ...".
+1. Clona el repositorio de GitHub.
+2. Navega hasta el directorio del proyecto.
+3. Ejecuta `npm install` para instalar las dependencias.
+4. Ejecuta `npm run dev` para iniciar el servidor de desarrollo.

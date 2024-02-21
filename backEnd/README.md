@@ -1,30 +1,54 @@
-Backend
-=======
+# Pizzeria Backend
 
-Prerequisites
--------------
+Este proyecto es el backend de una aplicación de pizzería. El objetivo es exponer una API JSON para ser consumida por un cliente frontend para ordenar pizzas.
 
-* [Git](http://git-scm.com/)
-* [nodejs](https://nodejs.org/en/)
-* [express](https://express-validator.github.io/docs)
-* [jest](https://jestjs.io/)
-* nodejs framework of your choice
-* You can use any additional libraries you want.
+## Tecnologías utilizadas
 
-Project description
--------------------
+- Node.js
+- Express
+- Jest para pruebas unitarias
+- Express Validator para validación de datos
 
-**Pizzeria**
+## Entidades
 
-This application serves the purpose of exposing a JSON API to be consumed by a frontend client for ordering pizza. The development of an actual DB is not required.
+Las entidades en este proyecto son:
 
-The following entities should be created (including proper relations):
+- **pizza**: tiene un nombre y un precio (por ejemplo, Margherita $5, Pepperoni $6, ...)
+- **order**: tiene items
+- **order item**: tiene una pizza y una cantidad
 
-* *pizza* - has a name and price (e.g. Margherita $5, Pepperoni $6, ...)
-* *order* - has items
-* *order item* - has a pizza and quantity
+## Endpoints
 
-The following endpoints should return a JSON response:
-* `/api/orders` (list of orders)
-* `/api/orders/:id` (details of an individual order)
-* `/api/pizzas` (list of pizzas; see './backend/example-pizzas.json')
+Los endpoints que se exponen son:
+
+- `/api/orders`: devuelve una lista de pedidos
+- `/api/orders/:id`: devuelve los detalles de un pedido individual
+- `/api/pizzas`: devuelve una lista de pizzas
+
+## Pruebas
+
+Se han escrito pruebas unitarias para todas las funciones principales utilizando Jest. Estas pruebas siguen las mejores prácticas de BDD.
+
+## Principios SOLID
+
+El código sigue los principios SOLID para garantizar que sea fácil de mantener y extender en el futuro.
+
+## Validación
+
+Se utiliza Express Validator para validar las entradas del usuario y garantizar que los datos que se envían a la API sean correctos.
+
+## Cómo ejecutar el proyecto
+
+1. Clona el repositorio de GitHub.
+2. Navega hasta el directorio del proyecto.
+3. Ejecuta `npm install` para instalar las dependencias.
+4. Ejecuta `npm start` para iniciar el servidor.
+5. Ejecuta `npm test` para ejecutar las pruebas unitarias.
+
+## Documentación adicional
+
+Se ha proporcionado una colección de Postman con ejemplos de cómo interactuar con la API.
+
+## Enlace al repositorio de GitHub
+
+[Repositorio en GitHub](enlace-al-repositorio)
