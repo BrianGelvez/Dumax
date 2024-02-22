@@ -12,7 +12,7 @@ const OrderConfirmation = ({ order }) => {
         name: item.name,
         price: item.price
       },
-      quantity: 0
+      quantity: item.quantity
     }));
   
     try {
